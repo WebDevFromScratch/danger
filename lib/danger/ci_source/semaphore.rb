@@ -26,6 +26,7 @@ module Danger
       warn "SEMAPHORE_GIT_PR_SHA: #{env["SEMAPHORE_GIT_PR_SHA"]}"
       warn "SEMAPHORE_GIT_PR_SLUG: #{env["SEMAPHORE_GIT_PR_SLUG"]}"
       warn "SEMAPHORE_GIT_PR_BRANCH: #{env["SEMAPHORE_GIT_PR_BRANCH"]}"
+      warn "DANGER_GITHUB_API_TOKEN: #{env["DANGER_GITHUB_API_TOKEN"]}"
       one = ["SEMAPHORE_REPO_SLUG", "PULL_REQUEST_NUMBER"].all? { |x| env[x] && !env[x].empty? }
       two = ["SEMAPHORE_GIT_REPO_SLUG", "SEMAPHORE_GIT_PR_NUMBER"].all? { |x| env[x] && !env[x].empty? }
 
